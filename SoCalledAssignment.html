@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script>
+        function myFunction() {
+            console.log("function is working via global function !!!");
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log("DOM Loaded");
+            let btn = document.querySelector("#btn");
+            btn.addEventListener('click', () => {
+                console.log("button is working without global functon !!!");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button onclick="myFunction()">Click</button><br><br>
+    <button id="btn">Click Me!!!</button><br>
+
+    <h3>Select Car :</h3>
+    <input type="checkbox" id="car1" name="vehicle2" value="audi">
+    <label for="car1">Audi</label><br>
+    <input type="checkbox" id="car2" name="vehicle3" value="bmw">
+    <label for="car2">BMW</label><br>
+    <input type="checkbox" id="car3" name="vehicle3" value="rangerover">
+    <label for="car3">Range Rover</label><br>
+    <input type="checkbox" id="car4" name="vehicle4" value="volvo">
+    <label for="car4">Volvo</label><br><br>
+
+    <label for="cars">Select Car Brand:</label>
+    <select name="cars" id="cars">
+        <option value="volvo">Audi</option>
+        <option value="saab">BMW</option>
+        <option value="mercedes">Range Rover</option>
+        <option value="audi">Volvo</option>
+    </select><br>
+
+    <div class="container">
+        <h4>Spinners</h4>
+        <div class="spinner-border"></div>
+    </div>
+
+    <h2>Slider</h2>
+    <input type="range" min="1" max="100" id="SlideId" value="35"><br><br>
+
+    <label for="Address">Address :</label>
+    <textarea id="Address" name="Address" rows="5" cols="50">
+    </textarea>
+</body>
+
+</html>
